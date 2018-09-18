@@ -1,8 +1,6 @@
-##How to run the App
-
+##How to run the App##
 
 npm install
-
 
 npm start
 
