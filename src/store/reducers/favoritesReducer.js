@@ -5,7 +5,7 @@ const initialState = {
     loading: false
 }
 
-const fetchUsersStart = (state, action) =>{
+const fetchFavoritesStart = (state, action) =>{
     return {
         ...state,
         loading: true
@@ -13,7 +13,7 @@ const fetchUsersStart = (state, action) =>{
     };
 };
 
-const fetchUsersSucess = (state, action) =>{
+const fetchFavoritesSucess = (state, action) =>{
     return {
         ...state,
         loading: false,
@@ -21,7 +21,7 @@ const fetchUsersSucess = (state, action) =>{
     };
 
 };
-const fetchUsersFail = (state, action) =>{
+const fetchFavoritesFail = (state, action) =>{
     return{
         ...state,
         loading:false
@@ -30,9 +30,9 @@ const fetchUsersFail = (state, action) =>{
 
 const reducer = (state=initialState, action) =>{
     switch(action.type){
-        case actionTypes.FETCH_FAVORITES_START: return fetchUsersStart(state, action);
-        case actionTypes.FETCH_FAVORITES_SUCCESS: return fetchUsersSucess(state,action);
-        case actionTypes.FETCH_FAVORITES_FAIL: return fetchUsersFail(state, action);
+        case actionTypes.FETCH_FAVORITES_START: return fetchFavoritesStart(state, action);
+        case actionTypes.FETCH_FAVORITES_SUCCESS: return fetchFavoritesSucess(state,action);
+        case actionTypes.FETCH_FAVORITES_FAIL: return fetchFavoritesFail(state, action);
         default: return state
     }
 };
